@@ -1,7 +1,7 @@
 from django.db import models
 
-class Student(models.Model):
-    studentnr=models.CharField(max_length=5, primary_key=True) 
+class Ansatt(models.Model):
+    ansattnr=models.CharField(max_length=5, primary_key=True)
     fornavn=models.CharField(max_length=40)
     etternavn=models.CharField(max_length=40)
 
