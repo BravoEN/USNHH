@@ -5,4 +5,3 @@ from .models import Ansatt, Emne, Student, Forelesning
 admin.site.register(Ansatt)
 admin.site.register(Student)
 admin.site.register(Emne)
-admin.site.register(Forelesning)
