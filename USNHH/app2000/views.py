@@ -4,6 +4,9 @@ from .models import Student, Ansatt, Emne, Forelesning
 
 # Create your views here.
 def index(request):
+    return render(request, 'app2000/index.html')
+
+def student(request):
     studenter = Student.objects.all()
     context = {'studenter' : studenter}
-    return render(request, 'index.html', context)
+    return render(request, 'app2000/studenter.html', context)

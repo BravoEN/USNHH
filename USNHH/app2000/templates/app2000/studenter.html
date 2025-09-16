@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Studenter{% endblock %}
+
+{% block content %}
+    <h1>Studentliste: </h1>
+    <p>
+        {% for Student in studenter %}
+            {{Student.fornavn}} {{Student.etternavn}}
+        {% endfor %}
+    </p>
+{% endblock %}
