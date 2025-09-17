@@ -1,6 +1,6 @@
-<h2>Studentliste: </h2>
-{% for Student in studenter %}
-    {% if info.emnekode == studentEmne and info.student == Student.studentnr  %}
-        <li>{{Student.fornavn}} {{Student.etternavn}}</li>
-    {% endif %}
+<h2>Studentliste:</h2>
+<ul>
+{% for infoStudent in info %}
+    <li>{{ infoStudent.student.fornavn }} {{ infoStudent.student.etternavn }}</li>
 {% endfor %}
+</ul>

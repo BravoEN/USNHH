@@ -21,7 +21,11 @@ def emne(request):
 def valgtEmne(request):
     if request.method == 'POST':
         emne = request.POST.get('emne')
-        context = {'emne' : emne}
+        info = StudentEmne.objects.filter(emnekode=emne).select_related('student')
+        context = {
+            'emne' : emne,
+            'info' : info
+        }
         return render(request, 'app2000/valgtEmne.html', context)
 
 def registrerStudent(request):

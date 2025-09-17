@@ -6,4 +6,4 @@ class Student(models.Model):
     etternavn=models.CharField(max_length=40)
 
     def __str__(self):
-        return self.fornavn
+        return self.studentnr
