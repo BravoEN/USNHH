@@ -4,5 +4,11 @@
 
 {% block content %}
 <h1>{{ emne }}</h1>
+<h2>Registrer student til emne: </h2>
+<form action="{% url 'registrerStudent' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="studentnr" placeholder="Skriv inn studentnummeret til studenten du ønsker å registrere">
+    <button type="submit" name="emnekode" value="{{ emne }}">Registrer</button>
+</form>
 {% include 'app2000/studenter.html' with studentEmne=emne %}
 {% endblock %}
