@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Emner{% endblock %}
+
+{% block content %}
+    <h1>Emneliste: </h1>
+    <form action="{% url 'sys1000' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="emne" value="SYS1000">SYS1000</button>
+    </form>
+    <form action="{% url 'pro1000' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="emne" value="PRO1000">PRO1000</button>
+    </form>
+{% endblock %}

@@ -8,5 +8,18 @@ def index(request):
 
 def student(request):
     studenter = Student.objects.all()
-    context = {'studenter' : studenter}
+    info = Forelesning.objects.all()
+    context = {
+        'forelesning' : info,
+        'studenter' : studenter
+    }
     return render(request, 'app2000/studenter.html', context)
+
+def emne(request):
+    return render(request, 'app2000/emne.html')
+
+def valgtEmne(request):
+    if request.method == 'POST':
+        emne = request.POST.get('emne')
+        context = {'emne' : emne}
+        return render(request, 'app2000/valgtEmne.html', context)

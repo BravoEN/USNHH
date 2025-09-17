@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Emne: {{ emne }}{% endblock %}
+
+{% block content %}
+<h1>{{ emne }}</h1>
+{% include 'app2000/studenter.html' with studentEmne=emne %}
+{% endblock %}
