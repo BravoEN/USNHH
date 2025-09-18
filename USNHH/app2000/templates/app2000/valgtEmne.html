@@ -10,5 +10,10 @@
     <input type="text" name="studentnr" placeholder="Skriv inn studentnummeret til studenten du ønsker å registrere">
     <button type="submit" name="emnekode" value="{{ emne }}">Registrer</button>
 </form>
-{% include 'app2000/studenter.html' with studentEmne=emne %}
+<h2>Studentliste:</h2>
+<ul>
+{% for infoStudent in info %}
+    <li>{{ infoStudent.student.fornavn }} {{ infoStudent.student.etternavn }}</li>
+{% endfor %}
+</ul>
 {% endblock %}

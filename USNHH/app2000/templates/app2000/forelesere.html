@@ -1,0 +1,6 @@
+<h2>Foreleserliste:</h2>
+<ul>
+{% for ansatt in ansatte %}
+    <li>{{ ansatt.fornavn }} {{ ansatt.etternavn }}</li>
+{% endfor %}
+</ul>

@@ -5,3 +5,5 @@ from .models import Ansatt, Emne, Student
 admin.site.register(Ansatt)
 admin.site.register(Student)
 admin.site.register(Emne)
+# Django støtter ikke compsiteprimarykey i adminpanelet så "studentEmne" er ikke her.
+# Har lagd en funksjon får å legge inn studenter i ett emne

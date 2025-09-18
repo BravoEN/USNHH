@@ -1,6 +1,6 @@
 <h2>Studentliste:</h2>
 <ul>
-{% for infoStudent in info %}
-    <li>{{ infoStudent.student.fornavn }} {{ infoStudent.student.etternavn }}</li>
+{% for student in studenter %}
+    <li>{{ student.fornavn }} {{ student.etternavn }}</li>
 {% endfor %}
 </ul>

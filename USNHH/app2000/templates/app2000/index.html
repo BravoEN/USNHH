@@ -3,6 +3,10 @@
 {% block title %}USNHH Hjemmeside{% endblock %}
 
 {% block content %}
-    <h2>Hei</h2>
+    <h2>USNHH</h2>
     <p>Dette er hjemmesiden til USNHH</p>
+    <div>
+        {% include 'app2000/studenter.html' %}
+        {% include 'app2000/forelesere.html' %}
+    </div>
 {% endblock %}
